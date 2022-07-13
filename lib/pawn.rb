@@ -39,7 +39,7 @@ class Pawn
     movement = ::Validations::Direction.step_in_direction(@direction, step)
 
     if ::Validations::Position.valid?(@position[:x] + movement[:x], @position[:y] + movement[:y], self.grid_table)
-      @color = ::Validations::Color.update_color(@color)
+      @color = ::Validations::Color.update_color(@color) unless step.even?
       @position = { x: @position[:x] + movement[:x], y: @position[:y] + movement[:y] } and return true
     end
 
