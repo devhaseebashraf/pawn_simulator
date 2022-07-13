@@ -7,7 +7,7 @@
 The application that can read in commands of the following form
 
     PLACE 2,2,NORTH,WHITE
-    MOVE 
+    MOVE X
     LEFT
     RIGHT
     REPORT
